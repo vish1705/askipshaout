@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./yes_style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <title>Ask her out</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            /* This sets the body background color */
+            margin: 0;
+            font-family: "Playwrite DE Grund", cursive;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #F7F4F5;
+        }
+
+        .text-section {
+            flex: 1 1 300px;
+            padding: 20px;
+        }
+
+        .image-section {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section {
+                margin-top: 100px; /* Add margin-top for text section */
+            }
+        }
+
+        /* Style for WhatsApp button */
+        #whatsappButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: pink;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none; /* Remove default focus outline */
+            transition: background-color 0.3s ease;
+        }
+
+        #whatsappButton:hover {
+            background-color: #ff69b4; /* Lighter shade of pink on hover */
+        }
+    </style>
+</head> 
+<body>
+    <audio autoplay loop>
+        <source src="./Samjhawan Lyric Video  Humpty Sharma Ki DulhaniaVarunAliaArijit Singh Shreya Ghoshal.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="wrapper">
+        <div class="text-section">
+            <p class="text" style="font-size: 30px;">
+                Ipsha,<br>
+                you've just made me the happiest person in the world! I’m so grateful and excited to start this journey with you. Your love and presence mean everything to me. I promise to cherish and support you every step of the way. Here's to our future together, filled with love, laughter, and endless beautiful moments.
+                <br><br>
+                Thank you for being you, and thank you for saying yes!<br>
+            </p>
+            <button id="whatsappButton">Confess yours too</button>
+        </div>
+        <div class="image-section">
+            <img src="./giphy.jpeg" alt="Cute animated illustration">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('whatsappButton').addEventListener('click', function() {
+            // WhatsApp phone number (with country code) and message
+            const phoneNumber = '+919050504208'; // Replace with the recipient's phone number
+            const message = 'Its a yes'; // Replace with your message
+
+            // Construct the WhatsApp URL
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+            // Open WhatsApp URL in a new tab
+            window.open(whatsappURL, '_blank');
+        });
+        </script>
+        </body>
+        </html>
